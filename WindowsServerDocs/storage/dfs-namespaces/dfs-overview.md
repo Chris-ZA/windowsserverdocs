@@ -26,7 +26,7 @@ Here's a description of the elements that make up a DFS namespace:
 
 This topic discusses how to install DFS, what’s new, and where to find evaluation and deployment information.
 
-You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj884270.aspx), the **DfsUtil** command, or scripts that call WMI.
+You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
 
 ## Server requirements and limits
 
@@ -59,7 +59,7 @@ The following table describes additional factors to consider when choosing serve
 
 DFS Namespaces and DFS Replication are a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Namespaces module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
 
-Install DFS Namespaces by using either Server Manager or PowerShell, as described in the next sections.
+Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md), Server Manager, or PowerShell, as described in the next sections.
 
 ### To install DFS by using Server Manager
 
@@ -91,13 +91,13 @@ Install-WindowsFeature <name>
 For example, to install the Distributed File System Tools portion of the Remote Server Administration Tools feature, type:
 
 ```PowerShell
-Install-WindowsFeature RSAT-DFS-Mgmt-Con
+Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
 ```
 
 To install the DFS Namespaces, and the Distributed File System Tools portions of the Remote Server Administration Tools feature, type:
 
 ```PowerShell
-Install-WindowsFeature FS-DFS-Namespace, RSAT-DFS-Mgmt-Con
+Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 ```
 
 ## Interoperability with Azure virtual machines
@@ -106,7 +106,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 - You can’t cluster stand-alone namespaces in Azure virtual machines.
 
-- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on premise namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
+- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory, though a single namespace can’t encompass both on-premises namespace servers and namespace servers hosted in Azure VMs, even when using Active Directory Federation Services.
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
 
@@ -120,6 +120,6 @@ For additional related information, see the following resources.
 |**Deployment**|[DFS Namespace Scalability Considerations](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
 |**Operations**|[DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx)|
 |**Community resources**|[The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
-|**Protocols**|[File Services Windows Server Protocols](https://msdn.microsoft.com/library/cc239875.aspx)|
+|**Protocols**|[File Services Protocols in Windows Server](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (Deprecated)|
 |**Related technologies**| [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
 |**Support**|[Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|

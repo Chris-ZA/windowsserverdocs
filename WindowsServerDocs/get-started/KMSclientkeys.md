@@ -5,11 +5,10 @@ ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jaimeo
-ms.localizationpriority: high
-ms.date: 10/30/2017
+ms.localizationpriority: medium
+ms.date: 06/25/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-
 ---
 
 # Appendix A: KMS Client Setup Keys
@@ -45,6 +44,31 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 >   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
 >   for an update to support using those as KMS hosts for Windows 10 clients.
 
+## Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+
+## Windows 10, version 1803
+
+| Operating system edition          | KMS Client Setup Key          |
+|-----------------------------------|-------------------------------|
+| Windows 10 Education | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
+| Windows 10 Education N | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
+| Windows 10 Enterprise	| NPPR9-FWDCX-D2C8J-H872K-2YT43 |
+| Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
+| Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
+| Windows 10 Enterprise N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
+| Windows 10 Pro | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows 10 Pro Education | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
+| Windows 10 Pro Education N | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC |
+| Windows 10 Pro N | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Windows 10 Pro Workstation | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
+| Windows 10 Pro Workstation N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
+
+
 ## Windows Server, version 1709
 
 | Operating system edition       | KMS Client Setup Key          |
@@ -67,16 +91,16 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|
-| Windows 10 Professional Workstation | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
-| Windows 10 Professional Workstation N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
+| Windows 10 Pro Workstation | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
+| Windows 10 Pro Workstation N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
 
 
 ## Windows 10
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|
-| Windows 10 Professional           | W269N-WFGWX-YVC9B-4J6C9-T83GX |
-| Windows 10 Professional N         | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Windows 10 Pro           | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows 10 Pro N         | MH37W-N47XK-V7XM9-C7227-GCQG9 |
 | Windows 10 Enterprise             | NPPR9-FWDCX-D2C8J-H872K-2YT43 |
 | Windows 10 Enterprise N           | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
 | Windows 10 Education              | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
@@ -90,8 +114,8 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 | Operating system edition               | KMS Client Setup Key          |
 |----------------------------------------|-------------------------------|
-| Windows 8.1 Professional               | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 |
-| Windows 8.1 Professional N             | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY |
+| Windows 8.1 Pro               | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 |
+| Windows 8.1 Pro N             | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY |
 | Windows 8.1 Enterprise                 | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
 | Windows 8.1 Enterprise N               | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
 | Windows Server 2012 R2 Server Standard | D2N9P-3P6X9-2R39C-7RTCD-MDVJX |
@@ -102,8 +126,8 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 | Operating system edition                | KMS Client Setup Key          |
 |-----------------------------------------|-------------------------------|
-| Windows 8 Professional                  | NG4HW-VH26C-733KW-K6F98-J8CK4 |
-| Windows 8 Professional N                | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
+| Windows 8 Pro                  | NG4HW-VH26C-733KW-K6F98-J8CK4 |
+| Windows 8 Pro N                | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
 | Windows 8 Enterprise                    | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
 | Windows 8 Enterprise N                  | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
 | Windows Server 2012                     | BN3D2-R7TKB-3YPBD-8DRP2-27GG4 |

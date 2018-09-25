@@ -1,56 +1,63 @@
 ---
-title: Storage Spaces Direct in Windows Server 2016
+title: Storage Spaces Direct overview
 ms.prod: windows-server-threshold
 ms.author: cosdar
 ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 1/18/2017
+ms.date: 7/27/2018
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
-description: An overview of Storage Spaces Direct, a feature of Windows Server Enterprise Edition that enables you to cluster servers with internal storage into a software-defined storage solution.
+description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
 ---
-# Storage Spaces Direct in Windows Server 2016
+# Storage Spaces Direct overview
 
 >Applies to: Windows Server 2016
 
-Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features like caching, storage tiers, and erasure coding, together with the latest hardware innovation like RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
+Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+
+For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
 <table>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong><a href="understand-storage-spaces-direct.md">Understand</a></strong>
+            <strong>Understand</a></strong>
             <ul>
 			  <li>Overview (you are here)</li>
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
+              <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">
-            <strong><a href="plan-storage-spaces-direct.md">Plan</a></strong>
+            <strong>Plan</a></strong>
             <ul>
 			  <li><a href="storage-spaces-direct-hardware-requirements.md">Hardware requirements</a></li>
+              <li><a href="csv-cache.md">Using the CSV in-memory read cache</li>
 			  <li><a href="choosing-drives.md">Choose drives</a></li>
 			  <li><a href="plan-volumes.md">Plan volumes</a></li>
-              <li><a href="storage-spaces-direct-in-vm.md">Guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-in-vm.md">Using guest VM clusters</a></li>
+              <li><a href="storage-spaces-direct-disaster-recovery.md">Disaster recovery</a></li>
 		    </ul>
         </td>
     </tr>
     <tr style="border: 0;">
         <td style="padding: 5px; border: 0;">
-            <strong><a href="deploy-storage-spaces-direct.md">Deploy</a></strong>
+            <strong>Deploy</a></strong>
             <ul>
-			  <li><a href="hyper-converged-solution-using-storage-spaces-direct.md">Hyper-converged solution</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a><br><br><br><br></li>
+			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
+			  <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">
-            <strong><a href="manage-storage-spaces-direct.md">Manage</a></strong>
+            <strong>Manage</a></strong>
             <ul>
+              <li><a href="../../manage/windows-admin-center/use/manage-hyper-converged.md">Manage with Windows Admin Center</a></li>
 			  <li><a href="add-nodes.md">Add servers or drives</a></li>
 			  <li><a href="maintain-servers.md">Taking a server offline for maintenance</li>
 			  <li><a href="remove-servers.md">Remove servers</a></li>
@@ -59,14 +66,28 @@ Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows
 		    </ul>
         </td>
     </tr>
-    
+    <tr style="border: 0;">
+         <td style="padding: 5px; border: 0;">
+            <strong>Troubleshooting</a></strong>
+            <ul>
+              <li><a href="storage-spaces-states.md">Troubleshoot health and operational states</a></li>
+              <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
+            </ul>
+         <td style="padding: 5px; border: 0;">
+            <strong>Insider Preview content</a></strong>
+            <ul>
+                <li><a href="cluster-sets.md">Cluster sets</a></li>
+                <li><a href="performance-history.md">Performance history</a></li>
+                <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+            </ul>
+    </tr>
 </table>
 
 ## Videos
 
 **Quick Video Overview (5 minutes)**
 
-<iframe src="https://www.youtube.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
@@ -141,7 +162,7 @@ Storage Spaces Direct was designed for two distinct deployment options:
 
 ### Hyper-Converged
 
-**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Hyper-converged solution using Storage Spaces Direct](hyper-converged-solution-using-storage-spaces-direct.md).
+**One cluster for compute and storage.** The hyper-converged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage, storing their files on the local volumes. This eliminates the need to configure file server access and permissions, and reduces hardware costs for small-to-medium business or remote office/branch office deployments. See [Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md).
 
 ![Storage Spaces Direct serves storage to Hyper-V VMs in the same cluster](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
@@ -172,6 +193,45 @@ Here's an overview of the Storage Spaces Direct stack:
 **Cluster Shared Volumes.** The CSV file system unifies all the ReFS volumes into a single namespace accessible through any server, so that to each server, every volume looks and acts like it's mounted locally.
 
 **Scale-Out File Server.** This final layer is necessary in converged deployments only. It provides remote file access using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
+
+## Customer stories
+
+There are [over 10,000 clusters](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) worldwide running Storage Spaces Direct. Organizations of all sizes, from small businesses deploying just two nodes, to large enterprises and governments deploying hundreds of nodes, depend on Storage Spaces Direct for their critical applications and infrastructure.
+
+Click any logo to read the full customer story:
+
+<div style="background-color: rgba(0,0,0,0.1); padding: 10px;">
+    <a target="_blank" href="https://customers.microsoft.com/story/createadvertising"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Create Advertising (Microsoft Customer Story)" src="wall-of-logos/microsoft-create-advertising.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/majmaah-university"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Majmaah University (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-majmaah-university.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/soerum-kommune"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Soerum Kommune (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-soerum-kommune.png"></a>
+    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017mar-make-it.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Make IT (Fujitsu Case Study)" src="wall-of-logos/fujitsu-make-it.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/mead-hunt-replaces-aging-san-with-dataon-cib-9112-and-windows-server-2016-running-refs-and-hyper-v/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Mead & Hunt (DataON Case Study)" src="wall-of-logos/dataon-mead-hunt.png"></a>
+    <a target="_blank" href="https://customers.microsoft.com/story/youth-villages"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Youth Villages (Microsoft Customer Story)" src="wall-of-logos/microsoft-youth-villages.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/evga-chooses-microsoft-and-dataon-for-their-next-generation-hyper-converged-cluster-platform/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="EVGA (DataON Case Study)" src="wall-of-logos/dataon-evga.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/king-county-wa-library-system-upgrades-to-a-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="King County Library System (DataON Case Study)" src="wall-of-logos/dataon-king-county-library-system.png"></a>
+    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017sep-itarex.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="iTAREX (Fujitsu Case Study)" src="wall-of-logos/fujitsu-itarex.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/bennington-updates-their-storage-with-a-windows-server-2016-solution/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Bennington (DataON Case Study)" src="wall-of-logos/dataon-bennington.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/cherokee-county-school-district-replaces-their-iscsi-san-storage-with-a-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Cherokee County School District (DataON Case Study)" src="wall-of-logos/dataon-cherokee-county-school-district.png"></a>
+    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2018jun-harreringenieure.html"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Harrer Ingenieure GmbH (Fujitsu Case Study)" src="wall-of-logos/fujitsu-harrer-ingenieure.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/braathe-gruppen-as"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Braathe Gruppen Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-braathe-gruppen.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/cloud-factory"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="SE Cloud Factory (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-se-cloud-factory.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/oblakoteka"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Oblakoteka Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-oblakoteka.png"></a>
+    <a target="_blank" href="https://lenovosuccess.com/casestudy/acuutech"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Acuutech (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-acuutech.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/infront-upgrades-their-hyper-v-and-storage-environment-to-a-dataon-and-storage-spaces-direct-solution/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Infront Finance (DataON Case Study)" src="wall-of-logos/dataon-infront.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/tmi-systems-consolidates-networking-and-storage-into-a-cost-effective-high-performance-storage-spaces-direct/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="TMI (DataON Case Study)" src="wall-of-logos/dataon-tmi.png"></a>
+    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/quest-chooses-dataon-microsoft-power-veeam-cloud-connect-backup-service/"><img onload="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px;'" onmouseover="this.style.cssText = 'box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.2); margin: 0px 2px 4px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" onmouseout="this.style.cssText = 'box-shadow: none; margin: 2px 2px 2px 2px; width: 19.2%; max-width: 225px; transition: 0.2s;'" title="Quest Technology Management (DataON Case Study)" src="wall-of-logos/dataon-quest-technology-management.png"></a>
+</div>
+
+## Management tools
+
+The following tools can be used to manage and/or monitor Storage Spaces Direct:
+
+| Name | Graphical or command-line? | Paid or included? |
+|-----------------|----------------------------|-------------------|
+| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Graphical    | Included |
+| Server Manager & Failover Cluster Manager                                 | Graphical    | Included |
+| Windows PowerShell                                                        | Command-line | Included |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) & [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
 
 ## Get started
 

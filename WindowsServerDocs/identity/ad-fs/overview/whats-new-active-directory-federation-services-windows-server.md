@@ -39,7 +39,7 @@ AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD 
 * Azure MFA can be configured for intranet or extranet, or as part of any access control policy.
 
 For more information about Azure MFA with AD FS
-*  [Configure AD FS 2016 and Azure MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-adfs)  
+*  [Configure AD FS 2016 and Azure MFA](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa)  
 
 ### Password-less Access from Compliant Devices
 AD FS 2016 builds on previous device registration capabilities to enable sign on and access control based the device compliance status. Users can sign on using the device credential, and compliance is re-evaluated when device attributes change, so that you can always ensure policies are being enforced.  This enables policies such as
@@ -60,7 +60,7 @@ For more information about using device based conditional access with AD FS
 * [Access Control Policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
 
 ### Sign in with Windows Hello for Business   
-Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
+Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
 
 For more information about using Microsoft Windows Hello for Business in your organization
 *  [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)
@@ -91,7 +91,7 @@ Many organizations have a combination of Active Directory and third-party direct
 
 For more information see [Configure AD FS to authenticate users stored in LDAP directories.](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)  
 
-## Better Sign in experience
+## Better Sign-in experience
 ### Customize sign in experience for AD FS applications  
 We heard from you that the ability to customize the logon experience for each application would be a great usability improvement, especially for organizations who provide sign on for applications that represent multiple different companies or brands.  
 

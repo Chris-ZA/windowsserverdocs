@@ -6,13 +6,13 @@ ms.prod: windows-server-threshold
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
-ms.author: jamesmci
-author: jamesmci
+ms.author: pashort
+author: shortpatti
 ---
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 
